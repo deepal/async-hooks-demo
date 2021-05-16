@@ -15,7 +15,7 @@ class DBQuery extends AsyncResource {
     this.runInAsyncScope(callback, null);
   }
 
-  close() {
+  destroy() {
     this.emitDestroy();
   }
 }
@@ -25,7 +25,10 @@ dbquery.executeQuery(() => {
   logger.write("query executed!");
 });
 
-// Wait
+// Destroy the resource after 500ms
 setTimeout(() => {
-  dbquery.close();
-}, 5000);
+  dbquery.destroy();
+}, 500);
+
+// Wait until the resource is manually destroyed
+setTimeout(() => {}, 9999999);
