@@ -1,6 +1,6 @@
 # Async Hooks Examples
 
-This repository contains async hooks examples used in my blog article at https://blog.insiderattack.net.
+This repository contains async hooks examples used in my blog article at https://blog.insiderattack.net/understanding-async-resources-with-async-hooks-3416de574f30.
 
 Async hooks set up and the logger can be found in the `setup` directory.
 
