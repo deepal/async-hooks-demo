@@ -1,4 +1,3 @@
-const { executionAsyncId } = require("async_hooks");
 const { logger } = require("./setup");
 logger.clearLog();
 
