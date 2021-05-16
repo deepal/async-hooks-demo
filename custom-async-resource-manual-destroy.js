@@ -24,11 +24,7 @@ const dbquery = new DBQuery();
 dbquery.executeQuery(() => {
   logger.write("query executed!");
 });
-
-// Destroy the resource after 500ms
-setTimeout(() => {
-  dbquery.destroy();
-}, 500);
+dbquery.destroy();
 
 // Wait until the resource is manually destroyed
 setTimeout(() => {}, 9999999);
