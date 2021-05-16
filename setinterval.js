@@ -5,9 +5,8 @@ logger.clearLog();
 let count = 0;
 let interval = null;
 interval = setInterval(() => {
-  count += 1;
   logger.write(`callback executed`);
-  if (count >= 5) {
+  if (++count >= 3) {
     clearInterval(interval);
   }
 }, 1000);

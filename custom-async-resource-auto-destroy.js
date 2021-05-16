@@ -16,9 +16,8 @@ class DBQuery extends AsyncResource {
   }
 }
 
-let d = new DBQuery();
-
-d.executeQuery(() => {
+const dbquery = new DBQuery();
+dbquery.executeQuery(() => {
   logger.write("query executed!");
 });
 

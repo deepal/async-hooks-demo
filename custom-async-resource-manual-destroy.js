@@ -20,11 +20,12 @@ class DBQuery extends AsyncResource {
   }
 }
 
-let d = new DBQuery();
-d.executeQuery(() => {
+const dbquery = new DBQuery();
+dbquery.executeQuery(() => {
   logger.write("query executed!");
-  d.close();
 });
 
 // Wait
-setTimeout(() => {}, 99999);
+setTimeout(() => {
+  dbquery.close();
+}, 5000);
